@@ -34,11 +34,11 @@ json_awal = {
 
 string = json.dumps(json_awal)
 missing_string = string[:-18]
-print('missing string %s', (missing_string,))
+print('missing string:', missing_string)
 try:
-    jsob = json.loads(ilang)
+    jsob = json.loads(missing_string)
     print(jsob)
 except Exception as e:
     print(e)
-    res = validation(ilang)
+    res = validation(missing_string)
     print(res)
