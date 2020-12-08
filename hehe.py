@@ -13,6 +13,8 @@ def fixer(e, data):
     elif "Expecting ':' delimiter" in str(e):
         fix_data = data+':'
         #print('fixed ":" delimeter')
+    elif "Expecting property name enclosed in double quotes" in str(e):
+        fix_data = data+'"' 
     else:
         fix_data = "unfix"
 
@@ -35,7 +37,7 @@ json_awal = {
 }
 
 string = json.dumps(json_awal)
-ilang = string[:-15]
+ilang = string[:-18]
 print(ilang)
 try:
     jsob = json.loads(ilang)
