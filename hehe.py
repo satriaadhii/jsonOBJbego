@@ -26,13 +26,13 @@ def validation(string):
         except Exception as e:
             data = fixer(e, data)
 
-json_awal = {
+jsstr = {
     "asep" : "asep",
     "foo" : "bar",
     "nani" : "hahay",
 }
 
-string = json.dumps(json_awal)
+string = json.dumps(jsstr)
 missing_string = string[:-18]
 print('missing string:', missing_string)
 try:
